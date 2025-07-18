@@ -10,7 +10,7 @@ import { useState } from "react";
 export const NavBar = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     return (
-        <div className="w-full bg-[#EDE9E2] border-b-2  border-[#BCAE9A] ">
+        <nav className="w-full bg-[#EDE9E2] border-b-2  border-[#BCAE9A] ">
             <div className="mx-4 md:mx-10  ">
                 <div className="flex items-center justify-between  ">
                     {/* Logo */}
@@ -140,6 +140,6 @@ export const NavBar = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </nav>
     );
 }
