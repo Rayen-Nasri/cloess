@@ -12,14 +12,12 @@ export const HeroSection = () => {
     };
 
     return (
-        <section className="relative w-full h-full sm:bg-none bg-linear-to-b from-[#EADDB5] to-[#F5F3EF] ">
-            <img
-                src="/heroBg.svg"
-                alt="Cloess"
-                className="hidden absolute sm:flex w-full "
-                style={{ zIndex: -1, height: "100vh", objectFit: "cover" }}
-            />
-            <div className="text-black hidden sm:flex  sm:space-x-50 2xl:space-x-55 xl:p-5 2xl:p-12  justify-center text-[113px] 2xl:text-[125px] ">
+        <section
+            className="relative w-full h-full min-h-screen bg-gradient-to-b from-[#EADDB5] to-[#F5F3EF] bg-[url('/heroBg.svg')] bg-cover bg-center"
+            style={{ zIndex: 0 }}
+        >
+            {/* Text "CLO" and "ESS" shown only on larger screens */}
+            <div className="text-black hidden sm:flex space-x-50 2xl:space-x-55 xl:p-5 2xl:p-12 justify-center text-[113px] 2xl:text-[125px]">
                 <motion.h1 className="playfair-display-sc-regular"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -35,20 +33,22 @@ export const HeroSection = () => {
                     ESS
                 </motion.h1>
             </div>
-            <div className="flex flex-col md:flex-row justify-between w-full h-full p-5 sm:p-10 2xl:p-20 space-y-10 md:space-y-0">
+
+            {/* Content containers for Histoire and Collection */}
+            <div className="flex flex-col md:flex-row justify-between items-center mx-10 pt-45 md:p-10 h-full space-y-20 md:space-y-0">
                 <div className="flex-shrink-0">
-                    <Histoire 
-                        isActive={activeComponent === 'histoire'} 
-                        onToggle={() => handleComponentToggle('histoire')} 
+                    <Histoire
+                        isActive={activeComponent === 'histoire'}
+                        onToggle={() => handleComponentToggle('histoire')}
                     />
                 </div>
                 <div className="flex-shrink-0">
-                    <Collection 
-                        isActive={activeComponent === 'collection'} 
-                        onToggle={() => handleComponentToggle('collection')} 
+                    <Collection
+                        isActive={activeComponent === 'collection'}
+                        onToggle={() => handleComponentToggle('collection')}
                     />
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
