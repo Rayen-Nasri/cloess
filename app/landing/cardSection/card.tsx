@@ -14,7 +14,7 @@ export const CardSection = () => {
 
             </div>
 
-            <div className="grid grid-cols-4 grid-rows-1 gap-4 text-black mx-10 mt-20 ">
+            <div className="grid grid-cols-4 grid-rows-1 gap-4 text-black mx-10 mt-20 mb-20 ">
                 {
                     Array(4).fill(null).map((_, index) => (
                         <div key={index} className="bg-[#E7E7E1] border-2 border-[#A8B5A2]">
