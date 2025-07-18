@@ -1,6 +1,6 @@
 'use client';
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ShoppingBag } from "lucide-react";
+import {  ShoppingBag } from "lucide-react";
 import { useEffect, useState } from 'react';
 
 interface CollectionProps {
